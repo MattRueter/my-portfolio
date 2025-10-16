@@ -1,10 +1,12 @@
+import Logo from './assets/logo.svg';
 import './index.scss'
 
 
 function App() {
   return (
-    <>    
+    <>      
       <section className='heading'>
+        <img src={Logo} alt="Logo" className='logo'/>
         <h1 aria-label="Matt Rueter">Matt_Rueter</h1>
         <div className='grouping'>
           <h2>Software Developer</h2>
