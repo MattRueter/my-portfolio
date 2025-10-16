@@ -6,8 +6,8 @@
   --color-text: rgba(23, 22, 66, 0.87);
   --color-text-secondary: rgba(31, 30, 112, 0.87);
   --color-link: rgba(84, 149, 235, 0.87);
-  --color-bg: rgba(237, 236, 245, 0.87);
-  --border-color: rgba(211, 209, 247, 0.87);
+  --color-bg: rgba(246, 246, 250, 0.87);
+  --border-color: rgba(222, 221, 248, 0.87);
 
   /* Fonts */
   --font-main: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -50,7 +50,6 @@ Logo
   height:auto;
 }
 
-
 /* =========================
    Headings
 =========================== */
@@ -64,6 +63,31 @@ h2 {
   margin-bottom: var(--space-heading);
   font-weight: normal;
 }
+
+/* =========================
+   Paragraphs
+=========================== */
+p {
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   Lists
+=========================== */
+ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+li {
+  color: var(--color-text-secondary)
+}
+a {
+  color: var(--color-link);
+  text-decoration: underline;
+}
+
+
 
 /* =========================
    Sections
@@ -116,30 +140,20 @@ section {
 }
 
 /*Process*/
-.processCardContainer > * {
-  margin-top: 1rem;
+.processCardContainer {
+  display:flex;
+  flex-direction: row;
+  gap: 1rem;
 }
 
-/* =========================
-   Paragraphs
-=========================== */
-p {
-  margin-bottom: 1rem;
-}
 
-/* =========================
-   Lists
-=========================== */
-ul {
-  list-style: disc;
-  padding-left: 1.5rem;
-  margin-bottom: 1rem;
+/*==========================
+Media Queries
+===========================*/
+/* Tablet / smaller screens */
+@media (max-width: 768px) {
+  .processCardContainer {
+    flex-direction: column;
+    align-items: center;
+  }
 }
-li {
-  color: var(--color-text-secondary)
-}
-a {
-  color: var(--color-link);
-  text-decoration: underline;
-}
-
