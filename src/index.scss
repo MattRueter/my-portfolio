@@ -1,0 +1,80 @@
+/* =========================
+   :root - global variables
+=========================== */
+:root {
+  /* Colors */
+  --color-text: rgba(23, 22, 66, 0.87);
+  --color-bg: rgba(237, 236, 245, 0.87);
+
+  /* Fonts */
+  --font-main: system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  /* Spacing */
+  --space-section: 2rem;
+  --space-heading: 1rem;
+}
+
+/* =========================
+   Global resets
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: var(--space-section);
+}
+
+/* =========================
+   Headings
+=========================== */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-heading);
+  font-weight: normal;
+}
+
+/* =========================
+   Sections
+=========================== */
+section {
+  margin-bottom: var(--space-section);
+}
+
+/* =========================
+   Paragraphs
+=========================== */
+p {
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   Lists
+=========================== */
+ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: underline;
+}
+
