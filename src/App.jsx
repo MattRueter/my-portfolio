@@ -1,18 +1,19 @@
-import './App.css'
+import './index.scss'
+
 
 function App() {
   return (
     <>    
+      <section className='heading'>
+        <h1 aria-label="Matt Rueter">Matt_Rueter</h1>
+        <div className='grouping'>
+          <h2>Software Developer</h2>
+          <p>Madrid based - Eligible to work in Spain & U.S.</p>
+        </div>
+      </section>
       
-      <h1>Matt_Rueter</h1>
-      <h2>Software Developer</h2>
-      <ul>
-        <li>Madrid or remote</li>
-        <li>Legal working status in Spain and U.S.</li>
-      </ul>
-
       <section>
-        <p>What I can do</p>
+        <h2>What I can do</h2>
         <p>
           I’m a software developer who helps individuals and businesses bring their ideas to life on the web.
         </p>
@@ -30,9 +31,12 @@ function App() {
         </p>
       </section>
 
-      <section>Proposal process</section>
+      <section>
+        <h2>Proposal process</h2>
+      </section>
 
-      <section>Projects and experience
+      <section>
+        <h2>Projects and experience</h2>
         <ul>
           <li>Team Forward</li>
           <li>Chingu Dashboard</li>
@@ -41,7 +45,7 @@ function App() {
       </section>
 
       <section>
-        <p>contact:</p>
+        <h2>contact</h2>
         <p>get in touch with me through linkedin</p>
       </section>
 
