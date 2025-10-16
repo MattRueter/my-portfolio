@@ -1,0 +1,43 @@
+export const consultingProcessSteps =[
+  {
+    id:1, 
+    title:"Chat", 
+    description:"initial conversation about your goals. i.e. What problem do you want to solve?",
+    bullets: ["get information on organization structure and activity", "get an idea about current technology use"],
+  },
+  {
+    id:2, 
+    title:"Discovery", 
+    description:"I'll run an audit in order to go a bit deeper and find problems that software might solve.", 
+    bullets:[
+      "Create surveys for staff or clients", 
+      "Run focus groups or interviews",
+      "Shadow processes or workflows", 
+      "Find out about technology already being used and possibility of any integrations",
+    ]
+  },
+  {
+    id:3,
+    title:"Proposal",
+    description:"I'll send you a proposal for your project.",
+    bullets:["project ideas that address needs", "estimate timeframe until MVP", "quote"]
+  },
+    {
+    id:4,
+    title:"Planning",
+    description:"Fine tune definition of MVP & Set up workflow and environment",
+    bullets:["set up accounts if needed", "sketch design of application(s)", "create wireframe of UI if needed", "agree on workflow/review process"]
+  },
+    {
+    id:5,
+    title:"Development",
+    description:"This is where I build the product.",
+    bullets:["regular reviews", "get feedback from testers/users"]
+  },
+    {
+    id:6,
+    title:"Handoff/Maintenance OR Continue Iterating",
+    description:"Once MVP is reached we either finish or continue building more features",
+    bullets:["Monitor for bug reports","make sure documentation is available"]
+  }
+]
