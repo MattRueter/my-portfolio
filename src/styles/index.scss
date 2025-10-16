@@ -4,8 +4,10 @@
 :root {
   /* Colors */
   --color-text: rgba(23, 22, 66, 0.87);
+  --color-text-secondary: rgba(31, 30, 112, 0.87);
   --color-link: rgba(84, 149, 235, 0.87);
   --color-bg: rgba(237, 236, 245, 0.87);
+  --border-color: rgba(211, 209, 247, 0.87);
 
   /* Fonts */
   --font-main: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -113,7 +115,10 @@ section {
   max-width: 40rem;
 }
 
-
+/*Process*/
+.processCardContainer > * {
+  margin-top: 1rem;
+}
 
 /* =========================
    Paragraphs
@@ -130,7 +135,9 @@ ul {
   padding-left: 1.5rem;
   margin-bottom: 1rem;
 }
-
+li {
+  color: var(--color-text-secondary)
+}
 a {
   color: var(--color-link);
   text-decoration: underline;

@@ -1,7 +1,7 @@
 import ProcessCard from './components/ProcessCard';
 import Logo from './assets/logo.svg';
 import { consultingProcessSteps } from './consts';
-import './index.scss'
+import './styles/index.scss'
 
 
 function App() {
@@ -29,20 +29,20 @@ function App() {
           Based in Madrid and open to remote work. 
           If you’re looking for a developer who can turn ideas into smooth, user-friendly web experiences, I’d love to chat.
         </p>
-      </section>
-      
-      
+      </section>      
 
       <section>
         <h2>Proposal process</h2>
-        {consultingProcessSteps.map((step) =>(
-            <ProcessCard
-              key={step.id}
-              title={step.title} 
-              description={step.description} 
-              bullets={step.bullets}
-            />
-        ))}
+        <div className='processCardContainer'>
+          {consultingProcessSteps.map((step) =>(
+              <ProcessCard
+                key={step.id}
+                title={step.title} 
+                description={step.description} 
+                bullets={step.bullets}
+              />
+          ))}
+        </div>
       </section>
 
       <section>

@@ -1,7 +1,8 @@
+import '../styles/processCard.scss';
 
 function ProcessCard ({title, description, bullets }) {
   return(
-    <>
+    <div className='processCard'>
       <p>{title}</p>
       <p>{description}</p>
       {bullets && (
@@ -11,7 +12,7 @@ function ProcessCard ({title, description, bullets }) {
           ))}
         </ul>
       )}
-    </>
+    </div>
   )
 };
 
