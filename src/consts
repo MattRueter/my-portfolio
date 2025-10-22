@@ -2,13 +2,13 @@ export const consultingProcessSteps =[
   {
     id:1, 
     title:"Chat", 
-    description:"This is a free initial conversation to find out what your goal is. i.e. What problem do you want to solve?",
+    description:"A free initial conversation to learn about your goals — what you’re trying to achieve and what problems you want to solve.",
     //bullets: ["gather information on your or your organizations activity", "get an idea about current technology use"],
   },
   {
     id:2, 
     title:"Discovery", 
-    description:"I'll run an audit in order to go a bit deeper and find problems that software might solve.",
+    description:"If needed — for example, with organizations or businesses — I’ll take a closer look at your current setup to understand challenges, workflows, and opportunities where software can help or be improved.",
     //bullets:[
     //  "Create surveys for staff or clients", 
     //  "Run focus groups or interviews",
@@ -19,7 +19,7 @@ export const consultingProcessSteps =[
   {
     id:3,
     title:"Proposal",
-    description:"You'll receive a proposal which will include estimated timeframes to a minimum viable product and a quote.",
+    description:"You'll receive a proposal which will include estimated timeframes to a first version (MVP), and a quote for the project.",
     //bullets:["project ideas that address needs", "estimate timeframe until MVP", "quote"]
   },
 ]

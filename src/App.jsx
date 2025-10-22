@@ -19,15 +19,14 @@ function App() {
       <section className='textSection'>
         <h2>What I do</h2>
         <p>
-          I’m a software developer who helps bring ideas to life.
-          I build modern web applications using technologies like React, TypeScript, and Node.js 
-          — everything from interactive front-ends to full-stack solutions.
+          I’m a full-stack developer focused on turning ideas into useful, well-crafted web applications.
+          I enjoy creating solutions that are intuitive, dependable, and built with care.
         </p>
         <p>    
-          I’ve worked on production-ready apps in remote Agile teams and can handle the full development process: 
-          from planning and design to development to launch and maintenance.
-          Based in Madrid and open to remote work. 
-          If you’re looking for a developer who can turn ideas into smooth, user-friendly web experiences, I’d love to chat.
+        I’ve built production-ready web applications both independently and as part of remote Agile teams.
+        I can handle the full process — from understanding your needs, through planning and design, to development, launch, and ongoing maintenance.        
+        Based in Madrid and open to remote work.
+        If you’re looking for a developer who can turn an idea into a smooth, user-friendly web experience, let’s chat.
         </p>
       </section>      
 
@@ -55,8 +54,9 @@ function App() {
       </section>
 
       <section>
-        <h2>Contact</h2>
-        <a href="https://www.linkedin.com/in/robert-matthew-rueter/">Linkedin</a>
+        <h2>
+          Connect or contact me on <a href="https://www.linkedin.com/in/robert-matthew-rueter/">Linkedin</a>
+          </h2>
       </section>
 
     </>
