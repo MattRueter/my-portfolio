@@ -46,11 +46,19 @@ function App() {
 
       <section>
         <h2>Projects and experience</h2>
+          
+        <h3 >As a team member:</h3>
         <ul>
           <li>Team Forward</li>
+          <a href="https://www.tfnetworking.com/">vist site</a>
           <li>Chingu Dashboard</li>
-          <li>Parlanchín</li>
+          <a href="https://www.chingu.io/">visit site</a>
         </ul>
+        <h3>Personal Projects:</h3>
+        <ul>
+          <li>Parlanchín</li>
+          <a href="https://blog.parlanchin.com/">read more</a>
+        </ul>  
       </section>
 
       <section>
