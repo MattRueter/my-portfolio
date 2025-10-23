@@ -52,12 +52,14 @@ function App() {
           <li>Team Forward</li>
           <a href="https://www.tfnetworking.com/">vist site</a>
           <li>Chingu Dashboard</li>
-          <a href="https://www.chingu.io/">visit site</a>
+          <a href="https://www.chingu.io/">read more about Chingu</a>
         </ul>
         <h3>Personal Projects:</h3>
         <ul>
           <li>Parlanchín</li>
           <a href="https://blog.parlanchin.com/">read more</a>
+          <li>Plug</li>
+          <a href="https://plug.parlanchin.com/">visit site</a>
         </ul>  
       </section>
 
