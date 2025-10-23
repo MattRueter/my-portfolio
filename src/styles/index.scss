@@ -3,7 +3,7 @@
 =========================== */
 :root {
   /* Colors */
-  --color-bg: rgba(232, 233, 252, 0.87);
+  --color-bg: rgba(248, 248, 250, 0.87);
   --color-text: rgb(45, 37, 104);
   --color-link: rgba(136, 123, 255, 1);
   --border-color: rgba(136, 123, 255, 0.219);
@@ -151,6 +151,9 @@ section {
   flex-direction: row;
   gap: 1rem;
 }
+.processCardContainer>*{
+  background-color: rgb(255, 255, 255);
+}
 
 /*==========================
 Media Queries
@@ -160,5 +163,13 @@ Media Queries
   .processCardContainer {
     flex-direction: column;
     align-items: center;
+  }
+  .heading{
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 10px;
   }
 }
