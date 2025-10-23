@@ -15,7 +15,6 @@ function App() {
           <p>Madrid based - Eligible to work in Spain & U.S.</p>
         </div>
       </section>
-      
       <section className='textSection'>
         <h2>What I do</h2>
         <p>
@@ -28,8 +27,7 @@ function App() {
         Based in Madrid and open to remote work.
         If you’re looking for a developer who can turn an idea into a smooth, user-friendly web experience, let’s chat.
         </p>
-      </section>      
-
+      </section>
       <section>
         <h2>Proposal process</h2>
         <div className='processCardContainer'>
@@ -43,10 +41,8 @@ function App() {
           ))}
         </div>
       </section>
-
       <section>
-        <h2>Projects and experience</h2>
-          
+        <h2>Projects and experience</h2>          
         <h3 >As a team member:</h3>
         <ul>
           <li>Team Forward</li>
@@ -62,13 +58,11 @@ function App() {
           <a href="https://plug.parlanchin.com/">visit site</a>
         </ul>  
       </section>
-
       <section>
         <h2>
           Connect or contact me on <a href="https://www.linkedin.com/in/robert-matthew-rueter/">Linkedin</a>
           </h2>
       </section>
-
     </>
   )
 }
