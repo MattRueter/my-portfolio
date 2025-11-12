@@ -154,7 +154,21 @@ section {
 .processCardContainer>*{
   background-color: rgb(255, 255, 255);
 }
-
+.ctaContainer{
+  display: flex;
+  color: rgba(248, 248, 250, 0.87);
+  font-size: medium;
+  font-weight: 600;
+}
+.cta{
+  padding: 1rem;
+  border-radius: 3px;
+  background-color: rgba(136, 123, 255, 0.95); ;
+}
+.link{
+  display: flex;
+  color: rgba(248, 248, 250, 0.87);
+}
 /*==========================
 Media Queries
 ===========================*/
@@ -171,5 +185,12 @@ Media Queries
     padding-top: 1rem;
     padding-bottom: 1rem;
     border-radius: 10px;
+  }
+  .cta{
+    flex-direction: column;
+    align-items: center;
+  }
+  .link{
+    justify-content: center;
   }
 }

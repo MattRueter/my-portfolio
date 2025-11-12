@@ -1,3 +1,5 @@
+import { Link } from 'react-router';
+import { SquareArrowRightIcon } from 'lucide-react';
 import ProcessCard from './components/ProcessCard';
 import Logo from './assets/logo.svg';
 import { consultingProcessSteps } from './consts';
@@ -39,6 +41,14 @@ function App() {
                 bullets={step.bullets}
               />
           ))}
+        </div>
+      </section>
+      <section className="ctaContainer">
+        <div className='cta'>
+          <p>If you teach, create learning materials, or run a language school, I might be well placed to help you build something.</p>
+          <Link className='link' to="language-tech">
+            read more here
+          </Link>
         </div>
       </section>
       <section>
