@@ -45,10 +45,17 @@ function App() {
       </section>
       <section className="ctaContainer">
         <div className='cta'>
-          <p>If you teach, create learning materials, or run a language school, I might be well placed to help you build something.</p>
-          <Link className='link' to="language-tech">
+          <p>Is your project related to language learning or teaching? I might be well placed to help you build something.</p>
+          <a
+            className='link' 
+            href="https://parlanchin.com/blog/about-me/"
+          >
+            read about my background here
+          </a>
+          {/*<Link className='link' to="language-tech">
             read more here
           </Link>
+          */}
         </div>
       </section>
       <section>

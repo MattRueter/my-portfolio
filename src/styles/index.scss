@@ -90,8 +90,9 @@ li {
 }
 a {
   color: var(--color-link);
-  text-decoration: underline;
+  text-decoration: underline;  
 }
+
 
 
 
@@ -157,19 +158,19 @@ section {
 /*Language teaching CTA*/
 .ctaContainer{
   display: flex;
-  color: rgba(248, 248, 250, 0.87);
-  font-size: medium;
-  font-weight: 700;
 }
 .cta{
   padding: 1rem;
+  border: 1px solid var(--border-color);
   border-radius: 3px;
-  background-color: rgba(136, 123, 255, 0.95); ;
+  background-color: rgb(223, 225, 252); 
 }
+
 .link{
   display: flex;
-  color: rgba(248, 248, 250, 0.87);
+  align-items: center;
 }
+
 /*==========================
 Media Queries
 ===========================*/
@@ -193,5 +194,6 @@ Media Queries
   }
   .link{
     justify-content: center;
+    align-items: center;
   }
 }
