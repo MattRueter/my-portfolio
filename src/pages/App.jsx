@@ -1,9 +1,8 @@
-import { Link, NavLink } from 'react-router';
-import { SquareArrowRightIcon } from 'lucide-react';
-import ProcessCard from './components/ProcessCard';
-import Logo from './assets/logo.svg';
-import { consultingProcessSteps } from './consts';
-import './styles/index.scss'
+import { NavLink } from 'react-router';
+import ProcessCard from '../components/ProcessCard';
+import Logo from '../assets/logo.svg';
+import { consultingProcessSteps } from '../consts';
+import '../styles/index.scss'
 
 
 function App() {
@@ -31,47 +30,35 @@ function App() {
         </p>
       </section>
       <section>
-        <h2>Projects and experience</h2>          
-        
+        <h2>Projects and experience</h2>        
         <h3>Personal Projects:</h3>
-        <ul className='projectCardListContainer'>
-          <li className="projectCard">
-            <h4>AI Promp Evaluation</h4>
-            <p>Prompt Engineering</p>
-            <NavLink to={`/projects/prompt-evaluation`}>Read more</NavLink>
+        <ul>
+          <li>
+            <NavLink to={`/projects/prompt-evaluation`}>AI Prompt Evaluation</NavLink>
           </li>
-          <li className="projectCard">
-            <h4>Zest</h4>
-            <p>EdTech</p>
-            <NavLink to={`/projects/zest`}>Read more</NavLink>
+          <li>
+            <NavLink to={`/projects/zest`}>Zest</NavLink>
           </li>
-          <li className="projectCard">
-            <h4>Idiom</h4>
-            <p>EdTech</p>
-            <NavLink to={`/projects/idiom`}>Read more</NavLink>
+          <li>
+            <NavLink to={`/projects/idiom`}>Idiom</NavLink>
           </li>
-          <li className="projectCard">
-            <h4>Palabrisa</h4>
-            <p>EdTech</p>
-            <NavLink to={`/projects/palabrisa`}>Read more</NavLink>
+          <li>
+            <NavLink to={`/projects/palabrisa`}>Palabrisa</NavLink>
           </li>
-          <li className="projectCard">
-            <h4>Plug</h4>
-            <p>API collection for dev students</p>
-            <NavLink to={`/projects/plug`}>Read more</NavLink>
+          <li>
+            <NavLink to={`/projects/plug`}>Plug</NavLink>
           </li>
         </ul>
-
-        <h3 >As a member of an Agile team:</h3>
+        <h3 >As a member Agile teams:</h3>
         <ul>
           <li>Team Forward</li>
           <a href="https://www.tfnetworking.com/">vist site</a>
           <li>Chingu Dashboard</li>
           <a href="https://www.chingu.io/">read more about Chingu</a>
         </ul>
-
       </section>
       <section>
+        <h2>Are you looking for a freelancer?</h2>
         <h2>Proposal process</h2>
         <div className='processCardContainer'>
           {consultingProcessSteps.map((step) =>(
@@ -87,16 +74,9 @@ function App() {
       <section className="ctaContainer">
         <div className='cta'>
           <p>Is your project related to language learning or teaching? I might be well placed to help you build something.</p>
-          <a
-            className='link' 
-            href="https://parlanchin.com/blog/about-me/"
-          >
-            read about my background here
-          </a>   
+          <NavLink to="/language-edtech" >Read about my background here.</NavLink>
         </div>
       </section>
-      
-
       <section>
         <h2>
           Connect or contact me on <a href="https://www.linkedin.com/in/robert-matthew-rueter/">Linkedin</a>
