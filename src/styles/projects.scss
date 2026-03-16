@@ -1,0 +1,29 @@
+/* Project pages ( /projects/:project ) */
+
+.projectPage {
+  width: min(960px, 100%);
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+/* Prevent the overview container from exceeding the page width */
+.overviewPresentationContainer {
+  max-width: 100%;
+  min-width: 0;
+}
+
+@media (max-width: 1050px) {
+  /* On smaller screens, the global body padding is large (2.5rem),
+     so reduce local page padding to avoid "double padding" + overflow feel. */
+  .projectPage {
+    padding: 2rem 1rem 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .projectPage {
+    padding: 1.5rem 0.75rem 2rem;
+  }
+}

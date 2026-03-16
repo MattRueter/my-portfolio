@@ -1,6 +1,7 @@
 import { useParams } from "react-router";
 import SlideDeck from "../components/SlideDeck";
 import '../styles/slideDecks.scss'
+import "../styles/projects.scss";
 
 /**
  * Slide path convention:
@@ -15,7 +16,9 @@ const projectData = {
         githubUrl: "",
         liveUrl: "",
         overviewSlides: [
-            // "/slides/prompt-evaluation/overview/1.svg",
+            "/slides/prompt-evaluation/overview/slide1.svg",
+            "/slides/prompt-evaluation/overview/slide2.svg",
+            "/slides/prompt-evaluation/overview/slide3.svg",
         ],
         featureDecks: [
             // {
@@ -73,13 +76,6 @@ export default function Projects() {
         );
     }
 
-    {/**
-    This is the Projects page and it displays information and slide decks related to a single project based on the url param.
-    Every project will have a set of slide decks. Each slide deck will have several slides saved as SVG files
-    These will likely best be stored in Public/ How should they be referenced? Is it best to have a key on each project for their decks? Keep in minde
-    each project will have an Overview slidedeck of a few slides but their 'feature' decks will vary. One project may have 1 another may have several each with a 
-    different number of slides.
-    */}
     return (
         <div className="projectPage">
             <header className="projectPage__header">
