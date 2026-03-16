@@ -8,22 +8,75 @@
   min-width: 0;
 }
 
-/* Prevent the overview container from exceeding the page width */
+/* Project page header + sections
+   Scoped to `.projectPage` so other routes are unaffected. */
+.projectPage__header {
+  margin-bottom: 2.5rem;
+}
+
+.projectPage__title {
+  margin-bottom: 0.75rem;
+}
+
+.projectPage__description {
+  max-width: 42rem;
+}
+
+.projectPage__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.projectPage__link {
+  text-decoration: underline;
+}
+
+.projectPage__section {
+  margin-top: 2.5rem;
+}
+
+.projectPage__sectionTitle {
+  margin-bottom: 1.25rem;
+}
+
+.projectPage__featureDecks {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+}
+
+.projectPage__featureDeck {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.projectPage__featureTitle {
+  margin-bottom: 0.25rem;
+}
+
+/* Prevent the overview container from exceeding the page width 
 .overviewPresentationContainer {
   max-width: 100%;
   min-width: 0;
 }
+*/
 
 @media (max-width: 1050px) {
   /* On smaller screens, the global body padding is large (2.5rem),
      so reduce local page padding to avoid "double padding" + overflow feel. */
   .projectPage {
     padding: 2rem 1rem 2.5rem;
+    /* Prevent Swiper decks from causing horizontal scroll on this page. */
+    overflow-x: hidden;
   }
 }
 
 @media (max-width: 640px) {
   .projectPage {
     padding: 1.5rem 0.75rem 2rem;
+    overflow-x: hidden;
   }
 }

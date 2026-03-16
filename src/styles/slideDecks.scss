@@ -94,6 +94,20 @@
     bottom: 0.1rem;
 }
 
+/* When SlideDeck is used on project detail pages, ensure the Swiper
+   instance cannot exceed the section width or cause horizontal scroll. */
+.projectPage .projectPage__section--overview .slideDeck,
+.projectPage .projectPage__section--features .slideDeck {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.projectPage .projectPage__section--overview .slideDeck .swiper,
+.projectPage .projectPage__section--features .slideDeck .swiper {
+    width: 100%;
+    max-width: 100%;
+}
+
 .slideDeck__image {
     max-width: 100%;
     height: auto;
