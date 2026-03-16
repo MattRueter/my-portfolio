@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function SlideDeck({ slides, variant = "overview", altPrefix }) {
@@ -13,9 +13,28 @@ export default function SlideDeck({ slides, variant = "overview", altPrefix }) {
     const isOverview = variant === "overview";
     const prevButtonRef = useRef(null);
     const nextButtonRef = useRef(null);
+    const swiperInstanceRef = useRef(null);
+
+    useEffect(() => {
+        const swiper = swiperInstanceRef.current;
+        const prevEl = prevButtonRef.current;
+        const nextEl = nextButtonRef.current;
+
+        if (!swiper || !prevEl || !nextEl) {
+            return;
+        }
+
+        swiper.params.navigation.prevEl = prevEl;
+        swiper.params.navigation.nextEl = nextEl;
+
+        if (swiper.navigation && typeof swiper.navigation.init === "function") {
+            swiper.navigation.init();
+            swiper.navigation.update();
+        }
+    });
 
     return (
-        <div className={`slideDeck slideDeck--${variant}`}>
+        <div className={`slideDeck slideDeck--${variant}`}>            
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={isOverview ? 40 : 24}
@@ -25,7 +44,8 @@ export default function SlideDeck({ slides, variant = "overview", altPrefix }) {
                     nextEl: nextButtonRef.current,
                 }}
                 onBeforeInit={(swiper) => {
-                    // Swiper reads nav elements on init; refs are set by then in React.
+                    swiperInstanceRef.current = swiper;
+
                     swiper.params.navigation.prevEl = prevButtonRef.current;
                     swiper.params.navigation.nextEl = nextButtonRef.current;
                 }}
