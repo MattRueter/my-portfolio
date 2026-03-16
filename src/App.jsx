@@ -1,4 +1,4 @@
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import { SquareArrowRightIcon } from 'lucide-react';
 import ProcessCard from './components/ProcessCard';
 import Logo from './assets/logo.svg';
@@ -31,6 +31,47 @@ function App() {
         </p>
       </section>
       <section>
+        <h2>Projects and experience</h2>          
+        
+        <h3>Personal Projects:</h3>
+        <ul className='projectCardListContainer'>
+          <li className="projectCard">
+            <h4>AI Promp Evaluation</h4>
+            <p>Prompt Engineering</p>
+            <NavLink to={`/projects/prompt-evaluation`}>Read more</NavLink>
+          </li>
+          <li className="projectCard">
+            <h4>Zest</h4>
+            <p>EdTech</p>
+            <NavLink to={`/projects/zest`}>Read more</NavLink>
+          </li>
+          <li className="projectCard">
+            <h4>Idiom</h4>
+            <p>EdTech</p>
+            <NavLink to={`/projects/idiom`}>Read more</NavLink>
+          </li>
+          <li className="projectCard">
+            <h4>Palabrisa</h4>
+            <p>EdTech</p>
+            <NavLink to={`/projects/palabrisa`}>Read more</NavLink>
+          </li>
+          <li className="projectCard">
+            <h4>Plug</h4>
+            <p>API collection for dev students</p>
+            <NavLink to={`/projects/plug`}>Read more</NavLink>
+          </li>
+        </ul>
+
+        <h3 >As a member of an Agile team:</h3>
+        <ul>
+          <li>Team Forward</li>
+          <a href="https://www.tfnetworking.com/">vist site</a>
+          <li>Chingu Dashboard</li>
+          <a href="https://www.chingu.io/">read more about Chingu</a>
+        </ul>
+
+      </section>
+      <section>
         <h2>Proposal process</h2>
         <div className='processCardContainer'>
           {consultingProcessSteps.map((step) =>(
@@ -51,30 +92,11 @@ function App() {
             href="https://parlanchin.com/blog/about-me/"
           >
             read about my background here
-          </a>
-          {/*<Link className='link' to="language-tech">
-            read more here
-          </Link>
-          */}
+          </a>   
         </div>
       </section>
-      <section>
-        <h2>Projects and experience</h2>          
-        <h3 >As a team member:</h3>
-        <ul>
-          <li>Team Forward</li>
-          <a href="https://www.tfnetworking.com/">vist site</a>
-          <li>Chingu Dashboard</li>
-          <a href="https://www.chingu.io/">read more about Chingu</a>
-        </ul>
-        <h3>Personal Projects:</h3>
-        <ul>
-          <li>Parlanchín</li>
-          <a href="https://blog.parlanchin.com/">read more</a>
-          <li>Plug</li>
-          <a href="https://plug.parlanchin.com/">visit site</a>
-        </ul>  
-      </section>
+      
+
       <section>
         <h2>
           Connect or contact me on <a href="https://www.linkedin.com/in/robert-matthew-rueter/">Linkedin</a>

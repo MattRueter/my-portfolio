@@ -171,6 +171,30 @@ section {
   align-items: center;
 }
 
+/*=======================
+Project card styles (disused for now)
+========================*/
+.projectCard{
+  background-color: #dfe1fc;
+  border-radius: 15px;
+  padding: 10px;
+  margin:7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width:10rem;
+}
+.projectCard > h4{
+  color:#44498f;;
+}
+.projectCard >p{
+  color:#454ba3;
+}
+.projectCardListContainer {
+  display:flex;
+  flex-wrap: wrap;
+  background-color: red;
+}
 /*==========================
 Media Queries
 ===========================*/
