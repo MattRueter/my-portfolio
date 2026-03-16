@@ -111,14 +111,12 @@ export default function Projects() {
 
             {project.overviewSlides && project.overviewSlides.length > 0 && (
                 <section className="projectPage__section projectPage__section--overview">
-                    <h2 className="projectPage__sectionTitle">Overview</h2>
-                    <div className="overviewPresentationContainer">
+                    <h2 className="projectPage__sectionTitle">Overview</h2>                            
                         <SlideDeck
                             slides={project.overviewSlides}
                             variant="overview"
                             altPrefix={`${project.title} overview`}
-                        />
-                    </div>
+                        />                
                 </section>
             )}
 
