@@ -1,11 +1,18 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import { useRef } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function SlideDeck({ slides, variant = "overview", altPrefix }) {
     if (!slides || slides.length === 0) return null;
 
     const isOverview = variant === "overview";
+    const prevButtonRef = useRef(null);
+    const nextButtonRef = useRef(null);
 
     return (
         <div className={`slideDeck slideDeck--${variant}`}>
@@ -13,12 +20,20 @@ export default function SlideDeck({ slides, variant = "overview", altPrefix }) {
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={isOverview ? 40 : 24}
                 slidesPerView={1}
-                navigation
+                navigation={{
+                    prevEl: prevButtonRef.current,
+                    nextEl: nextButtonRef.current,
+                }}
+                onBeforeInit={(swiper) => {
+                    // Swiper reads nav elements on init; refs are set by then in React.
+                    swiper.params.navigation.prevEl = prevButtonRef.current;
+                    swiper.params.navigation.nextEl = nextButtonRef.current;
+                }}
                 pagination={{ clickable: true }}
                 scrollbar={{ draggable: true }}
             >
                 {slides.map((src, index) => (
-                    <SwiperSlide className="slideDeck__slide" key={src || index}>
+                    <SwiperSlide className="slideDeck__slide" key={src || index}>                        
                         <img
                             src={src}
                             alt={
@@ -27,10 +42,31 @@ export default function SlideDeck({ slides, variant = "overview", altPrefix }) {
                                     : `Slide ${index + 1}`
                             }
                             className="slideDeck__image"
+                            loading="lazy"
                         />
                     </SwiperSlide>
                 ))}
             </Swiper>
+            <div className="slideDeck__nav" aria-hidden="false">
+                <button
+                    ref={prevButtonRef}
+                    type="button"
+                    className="slideDeck__navButton slideDeck__navButton--prev"
+                    aria-label="Previous slide"
+                >
+                    <ChevronLeft className="slideDeck__navIcon" aria-hidden="true" />
+                    <span className="slideDeck__navLabel">Prev</span>
+                </button>
+                <button
+                    ref={nextButtonRef}
+                    type="button"
+                    className="slideDeck__navButton slideDeck__navButton--next"
+                    aria-label="Next slide"
+                >
+                    <span className="slideDeck__navLabel">Next</span>
+                    <ChevronRight className="slideDeck__navIcon" aria-hidden="true" />
+                </button>
+            </div>
         </div>
     );
 }
