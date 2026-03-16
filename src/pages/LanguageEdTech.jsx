@@ -1,8 +1,8 @@
 import { Link } from "react-router";
-import './styles/index.scss'
-import './styles/languageTech.scss'
+import '../styles/index.scss'
+import '../styles/languageTech.scss'
 
-function LanguageTech () {
+export default function LanguageEdTech () {
   return(
     <div className="languageTechPage">
       <Link to="/">go back</Link>
@@ -19,12 +19,9 @@ function LanguageTech () {
         <ul>
           <li>automate placement testing</li>
           <li>material creation based on syllabus & course materials</li>
-          <li>student app to reinforce content from lessons</li>
+          <li>student facing app to reinforce content from lessons</li>
         </ul>
       </section>
     </div>
-
   )
 };
-
-export default LanguageTech;

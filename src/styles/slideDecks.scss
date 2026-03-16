@@ -1,0 +1,179 @@
+.slideDeck {
+    width: 100%;
+    position: relative;
+}
+
+.slideDeck--overview {
+    margin-top: 0.5rem;
+}
+
+.slideDeck--feature {
+    margin-top: 0.5rem;
+}
+
+.slideDeck__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideDeck__nav {
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5rem;
+    z-index: 2;
+}
+
+.slideDeck__navButton {
+    pointer-events: auto;
+    appearance: none;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: rgba(255, 255, 255, 0.88);
+    color: inherit;
+    border-radius: 999px;
+    height: 2.75rem;
+    min-width: 2.75rem;
+    padding: 0 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    cursor: pointer;
+    user-select: none;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.slideDeck__navIcon {
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+.slideDeck__navLabel {
+    font-size: 0.9rem;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+.slideDeck__navButton:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+.slideDeck__navButton:hover {
+    background: rgba(255, 255, 255, 0.96);
+}
+
+.slideDeck__navButton:active {
+    transform: translateY(1px);
+}
+
+.slideDeck__navButton:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.slideDeck .swiper-button-prev,
+.slideDeck .swiper-button-next {
+    display: none;
+}
+
+.slideDeck .swiper {
+    padding-bottom: 2rem;
+}
+
+.slideDeck .swiper-pagination {
+    bottom: 0.35rem;
+}
+
+.slideDeck .swiper-scrollbar {
+    bottom: 0.1rem;
+}
+
+/* When SlideDeck is used on project detail pages, ensure the Swiper
+   instance cannot exceed the section width or cause horizontal scroll. */
+.projectPage .projectPage__section--overview .slideDeck,
+.projectPage .projectPage__section--features .slideDeck {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.projectPage .projectPage__section--overview .slideDeck .swiper,
+.projectPage .projectPage__section--features .slideDeck .swiper {
+    width: 100%;
+    max-width: 100%;
+}
+
+.slideDeck__image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.5rem;
+}
+
+@media (max-width: 1050px) {
+    .slideDeck {
+        max-width: 100%;
+    }
+
+    /* Ensure the whole deck can shrink within the viewport. */
+    .slideDeck .swiper,
+    .slideDeck .swiper-wrapper,
+    .slideDeck .swiper-slide {
+        min-height: 0;
+    }
+
+    .slideDeck .swiper {
+        max-height: calc(100svh - 10rem);
+    }
+
+    .slideDeck__image {
+        width: 100%;
+        max-height: 65svh;
+        object-fit: contain;
+    }
+}
+
+@media (max-width: 640px) {
+    .slideDeck__nav {
+        margin-top: 0.75rem;
+        position: static;
+        inset: auto;
+        padding: 0;
+        gap: 0.75rem;
+    }
+
+    .slideDeck__navButton {
+        width: 100%;
+        justify-content: center;
+        height: 3rem;
+        padding: 0 1rem;
+    }
+
+    .slideDeck .swiper {
+        padding-bottom: 1.5rem;
+    }
+
+    .slideDeck .swiper-scrollbar {
+        display: none;
+    }
+
+    .slideDeck__image {
+        max-height: 55vh;
+        border-radius: 0.4rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .projectPage {
+        padding-inline: 0;
+    }
+
+    .projectPage__featureDecks {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
