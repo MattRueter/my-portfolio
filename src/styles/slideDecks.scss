@@ -1,0 +1,94 @@
+.projectPage {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+}
+
+.projectPage__header {
+    margin-bottom: 2.5rem;
+}
+
+.projectPage__title {
+    font-size: 2.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.projectPage__description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+}
+
+.projectPage__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.projectPage__link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid currentColor;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.projectPage__section {
+    margin-top: 2.5rem;
+}
+
+.projectPage__sectionTitle {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.projectPage__featureDecks {
+    display: grid;
+    gap: 2rem;
+}
+
+.projectPage__featureTitle {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+}
+
+.overviewPresentationContainer {
+    max-width: 960px;
+}
+
+.slideDeck {
+    width: 100%;
+}
+
+.slideDeck--overview {
+    margin-top: 0.5rem;
+}
+
+.slideDeck--feature {
+    margin-top: 0.5rem;
+}
+
+.slideDeck__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideDeck__image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .projectPage {
+        padding-inline: 0;
+    }
+
+    .projectPage__featureDecks {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
