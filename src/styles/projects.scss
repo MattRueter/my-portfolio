@@ -2,10 +2,13 @@
 
 .projectPage {
   width: min(960px, 100%);
+  /* Never allow this page container to be wider than the viewport,
+     which prevents horizontal scroll even when inner content (e.g. Swiper)
+     tries to extend beyond it. */
+  max-width: 90vw;
   margin: 0 auto;
   padding: 3rem 1.5rem 4rem;
   box-sizing: border-box;
-  min-width: 0;
 }
 
 /* Project page header + sections
