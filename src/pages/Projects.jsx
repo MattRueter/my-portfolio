@@ -19,6 +19,8 @@ const projectData = {
             "/slides/prompt-evaluation/overview/slide1.svg",
             "/slides/prompt-evaluation/overview/slide2.svg",
             "/slides/prompt-evaluation/overview/slide3.svg",
+            "/slides/prompt-evaluation/overview/slide4.svg",
+            "/slides/prompt-evaluation/overview/slide5.svg",
         ],
         featureDecks: [
             // {
