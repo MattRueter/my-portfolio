@@ -32,12 +32,12 @@
     pointer-events: auto;
     appearance: none;
     border: 1px solid rgba(0, 0, 0, 0.12);
-    background: rgba(255, 255, 255, 0.88);
+    background: rgba(218, 222, 243, 0.88);
     color: inherit;
     border-radius: 999px;
     height: 2.75rem;
-    min-width: 2.75rem;
-    padding: 0 0.85rem;
+    min-width: .75rem;
+    padding: 0 0.55rem;
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
@@ -53,7 +53,7 @@
 }
 
 .slideDeck__navLabel {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     line-height: 1;
     font-weight: 600;
     letter-spacing: 0.01em;
@@ -148,10 +148,12 @@
     }
 
     .slideDeck__navButton {
-        width: 100%;
+        width: 75%;
         justify-content: center;
         height: 3rem;
-        padding: 0 1rem;
+        padding: 0 2rem;
+        color:rgb(45, 37, 104);
+        background: rgba(248, 248, 250, 0.88);
     }
 
     .slideDeck .swiper {

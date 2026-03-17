@@ -1,4 +1,4 @@
-import { useParams } from "react-router";
+import { useParams, Link } from "react-router";
 import SlideDeck from "../components/SlideDeck";
 import '../styles/slideDecks.scss'
 import "../styles/projects.scss";
@@ -11,14 +11,16 @@ import "../styles/projects.scss";
 
 const projectData = {
     "prompt-evaluation": {
-        title: "AI Prompt Evaluation",
-        description: "Evaluate and iterate on AI prompts with structured workflows and clear feedback.",
-        githubUrl: "",
+        title: "AI Prompt Evaluation Pipeline",
+        description: "CLI tool to systematically test prompts against sets of user input.",
+        githubUrl: "https://github.com/MattRueter/ai-prompt-evaluation",
         liveUrl: "",
         overviewSlides: [
             "/slides/prompt-evaluation/overview/slide1.svg",
             "/slides/prompt-evaluation/overview/slide2.svg",
             "/slides/prompt-evaluation/overview/slide3.svg",
+            "/slides/prompt-evaluation/overview/slide4.svg",
+            "/slides/prompt-evaluation/overview/slide5.svg",
         ],
         featureDecks: [
             // {
@@ -30,34 +32,57 @@ const projectData = {
     },
     "zest": {
         title: "Zest",
-        description: "A product that brings energy and clarity to daily workflows.",
+        description: "Creates exercises and feedback from student foreign language writing tasks.",
         githubUrl: "",
         liveUrl: "",
-        overviewSlides: [],
+        overviewSlides: [
+            "/slides/zest/overview/slide1.svg",
+            "/slides/zest/overview/slide2.svg",
+            "/slides/zest/overview/slide3.svg",
+            "/slides/zest/overview/slide4.svg",
+            "/slides/zest/overview/slide5.svg",
+        ],
         featureDecks: [],
     },
     "idiom": {
         title: "Idiom",
-        description: "Language-learning tooling focused on real-world idiomatic usage.",
+        description: "Foreign language self study suite.",
         githubUrl: "",
-        liveUrl: "",
-        overviewSlides: [],
+        liveUrl: "https://demo.idiomlanguages.com/",
+        overviewSlides: [
+            "/slides/idiom/overview/slide1.svg",
+            "/slides/idiom/overview/slide2.svg",
+            "/slides/idiom/overview/slide3.svg",
+            "/slides/idiom/overview/slide4.svg",
+            "/slides/idiom/overview/slide5.svg",
+        ],
         featureDecks: [],
     },
     "palabrisa": {
         title: "Palabrisa",
-        description: "Experimental Spanish-learning experiences blending interaction and storytelling.",
+        description: "A language processing API which returns language learning exercises and analysis from words and texts.",
         githubUrl: "",
         liveUrl: "",
-        overviewSlides: [],
+        overviewSlides: [            
+            "/slides/palabrisa/overview/slide1.svg",
+            "/slides/palabrisa/overview/slide2.svg",
+            "/slides/palabrisa/overview/slide3.svg",
+            "/slides/palabrisa/overview/slide4.svg",
+            "/slides/palabrisa/overview/slide5.svg",],
         featureDecks: [],
     },
     "plug": {
         title: "Plug",
-        description: "A small utility project exploring integrations and automation.",
-        githubUrl: "",
-        liveUrl: "",
-        overviewSlides: [],
+        description: "A collection of simple APIs for student's of frontend development to play with.",
+        githubUrl: "https://github.com/Plug-org",
+        liveUrl: "https://plug.parlanchin.com/",
+        overviewSlides: [
+            "/slides/plug/overview/slide1.svg",
+            "/slides/plug/overview/slide2.svg",
+            "/slides/plug/overview/slide3.svg",
+            "/slides/plug/overview/slide4.svg",
+            "/slides/plug/overview/slide5.svg",
+        ],
         featureDecks: [],
     },
 };
@@ -79,6 +104,7 @@ export default function Projects() {
     return (
         <div className="projectPage">
             <header className="projectPage__header">
+                <Link to="/">go back</Link>
                 <h1 className="projectPage__title">{project.title}</h1>
                 {project.description && (
                     <p className="projectPage__description">{project.description}</p>

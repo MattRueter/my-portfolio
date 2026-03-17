@@ -75,7 +75,7 @@ export default function SlideDeck({ slides, variant = "overview", altPrefix }) {
                     aria-label="Previous slide"
                 >
                     <ChevronLeft className="slideDeck__navIcon" aria-hidden="true" />
-                    <span className="slideDeck__navLabel">Prev</span>
+                    {/*<span className="slideDeck__navLabel">Prev</span>*/}
                 </button>
                 <button
                     ref={nextButtonRef}
@@ -83,7 +83,7 @@ export default function SlideDeck({ slides, variant = "overview", altPrefix }) {
                     className="slideDeck__navButton slideDeck__navButton--next"
                     aria-label="Next slide"
                 >
-                    <span className="slideDeck__navLabel">Next</span>
+                    {/*<span className="slideDeck__navLabel">Next</span>*/}
                     <ChevronRight className="slideDeck__navIcon" aria-hidden="true" />
                 </button>
             </div>
