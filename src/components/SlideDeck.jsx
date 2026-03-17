@@ -8,30 +8,32 @@ import { useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function SlideDeck({ slides, variant = "overview", altPrefix }) {
-    if (!slides || slides.length === 0) return null;
-
-    const isOverview = variant === "overview";
-    const prevButtonRef = useRef(null);
-    const nextButtonRef = useRef(null);
-    const swiperInstanceRef = useRef(null);
-
-    useEffect(() => {
-        const swiper = swiperInstanceRef.current;
-        const prevEl = prevButtonRef.current;
-        const nextEl = nextButtonRef.current;
-
+  
+  const isOverview = variant === "overview";
+  const prevButtonRef = useRef(null);
+  const nextButtonRef = useRef(null);
+  const swiperInstanceRef = useRef(null);
+  
+  useEffect(() => {
+    const swiper = swiperInstanceRef.current;
+    const prevEl = prevButtonRef.current;
+    const nextEl = nextButtonRef.current;
+    
         if (!swiper || !prevEl || !nextEl) {
-            return;
+          return;
         }
-
+        
         swiper.params.navigation.prevEl = prevEl;
         swiper.params.navigation.nextEl = nextEl;
-
+        
         if (swiper.navigation && typeof swiper.navigation.init === "function") {
-            swiper.navigation.init();
-            swiper.navigation.update();
+          swiper.navigation.init();
+          swiper.navigation.update();
         }
-    });
+      });
+    
+    
+    if (!slides || slides.length === 0) return null;
 
     return (
         <div className={`slideDeck slideDeck--${variant}`}>            
