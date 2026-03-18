@@ -32,6 +32,14 @@ const projectData = {
                     "/slides/prompt-evaluation/features/pipeline/slide3.svg",
                 ],
              },
+             {
+                 id: "architecture",
+                 title: "Architecture",
+                 slides: [
+                    "/slides/prompt-evaluation/features/architecture/slide1.svg",
+                    "/slides/prompt-evaluation/features/architecture/slide2.svg",
+                ],
+             },
         ],
     },
     "zest": {
