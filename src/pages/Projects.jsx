@@ -23,11 +23,15 @@ const projectData = {
             "/slides/prompt-evaluation/overview/slide5.svg",
         ],
         featureDecks: [
-            // {
-            //     id: "prompt-tuning",
-            //     title: "Prompt Tuning Flow",
-            //     slides: ["/slides/prompt-evaluation/features/prompt-tuning/1.svg"],
-            // },
+             {
+                 id: "pipeline",
+                 title: "The Pipeline",
+                 slides: [
+                    "/slides/prompt-evaluation/features/pipeline/slide1.svg",
+                    "/slides/prompt-evaluation/features/pipeline/slide2.svg",
+                    "/slides/prompt-evaluation/features/pipeline/slide3.svg",
+                ],
+             },
         ],
     },
     "zest": {
@@ -149,6 +153,7 @@ export default function Projects() {
             {project.featureDecks && project.featureDecks.length > 0 && (
                 <section className="projectPage__section projectPage__section--features">
                     <h2 className="projectPage__sectionTitle">Features</h2>
+                    <p>This section highlights specific features of the project and focuses on design and technical decisions.</p>
                     <div className="projectPage__featureDecks">
                         {project.featureDecks.map((deck) => (
                             <article
