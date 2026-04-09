@@ -1,6 +1,9 @@
 import { NavLink } from 'react-router';
 import ProcessCard from '../components/ProcessCard';
 import Logo from '../assets/logo.svg';
+import github from '../../public/github.svg';
+import linkedin from '../../public/linkedinLogo.svg';
+import parlanchin from '../../public/parlanchin.svg';
 import { consultingProcessSteps } from '../consts';
 import '../styles/index.scss'
 
@@ -14,6 +17,17 @@ function App() {
         <div className='grouping'>
           <h2>Software Developer</h2>
           <p>Madrid based - Eligible to work in Spain & U.S.</p>
+        </div>
+        <div className='socials'>
+          <a href="https://github.com/MattRueter" target="_blank" rel="noopener noreferrer">
+            <img src={github} alt='github logo' />
+          </a>
+          <a href="https://www.linkedin.com/in/robert-matthew-rueter/" target="_blank" rel="noopener noreferrer">
+            <img src={linkedin} alt='linkedin logo' />
+          </a>
+          <a href="https://parlanchin.com/" target="_blank" rel="noopener noreferrer">
+            <img src={parlanchin} alt='parlanchin logo' />
+          </a>
         </div>
       </section>
       <section className='textSection'>
