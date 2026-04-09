@@ -141,6 +141,21 @@ section {
   }
 }
 
+/*CONTAINER FOR SOCIAL MEDIA LINKS*/
+.socials{
+  display: flex;
+  gap: 1rem;
+  a{
+    opacity: 1;
+    transition: opacity 150ms ease-in;
+    &:hover{
+      opacity: 0.8;
+    }
+  }
+  img {
+    width:1rem;    
+  }
+}
 
 .textSection{
   max-width: 40rem;
