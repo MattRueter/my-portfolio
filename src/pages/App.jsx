@@ -33,14 +33,11 @@ function App() {
       <section className='textSection'>
         <h2>What I do</h2>
         <p>
-          I’m a full-stack developer focused on turning ideas into useful, well-crafted web applications.
-          I enjoy creating solutions that are intuitive, dependable, and built with care.
+        I’m a full-stack developer who builds applications independently and in globally distributed teams, with a strong focus on mapping engineering to the product and user experience.
         </p>
         <p>    
-        I’ve built production-ready web applications both independently and as part of remote Agile teams.
-        I can handle the full process — from understanding your needs, through planning and design, to development, launch, and ongoing maintenance.        
-        Based in Madrid and open to remote work.
-        If you’re looking for a developer who can turn an idea into a smooth, user-friendly web experience, let’s chat.
+        I’ve worked cross-functionally with technical and non-technical colleagues, and I’m currently developing tools for foreign language education — applying domain expertise through solid engineering practices.
+        Based in Madrid, I’m looking for full-time and freelance opportunities.
         </p>
       </section>
       <section>

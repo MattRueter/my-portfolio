@@ -4,11 +4,13 @@ import { BrowserRouter, Routes, Route } from 'react-router'
 import App from './pages/App.jsx'
 import LanguageEdTech  from './pages/LanguageEdTech.jsx'
 import Projects from './pages/Projects.jsx'
+import ScrollToTop from './components/ScrollToTop.jsx'
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<App />}/>
         <Route path="language-edtech" element={<LanguageEdTech />} />
